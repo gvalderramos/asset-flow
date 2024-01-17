@@ -26,6 +26,7 @@ public:
 	~Field() {};
 
 	inline T get() const { return m_value; };
+	inline std::string name() const {return m_fieldName; };
 	inline void set(const T& value) { m_value = value; };
 
 	Field& operator=(const T& value){

@@ -1,7 +1,7 @@
-#include "asset-flow-db/database.hpp"
+#include "asset-flow-db/storage.hpp"
 
 int main() {
-    makeDatabase();
+   //makeDatabase();
     
     return 0;
 }
