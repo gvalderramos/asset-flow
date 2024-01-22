@@ -1,4 +1,4 @@
-file (GLOB_RECURSE ASSET_FLOW_DB_SRC *.cpp *.hpp)
+file (GLOB_RECURSE ASSET_FLOW_DB_SRC *.cpp *.hpp *.inl)
 
 add_library(asset-flow-db ${ASSET_FLOW_DB_SRC})
 

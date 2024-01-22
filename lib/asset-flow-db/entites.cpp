@@ -3,9 +3,9 @@
 
 std::string Migration::getFullSchema() {
     std::stringstream ss;
-    ss << "Migration(\n" << 
-        id.name() << " INTEGER PRIMARY KEY AUTOINCREMENT\n" <<
-        version.name() << " INT NOT NULL" << ")";
+    ss << "Migration( " << 
+        id.name() << " INTEGER PRIMARY KEY AUTOINCREMENT, " <<
+        version.name() << " INT NOT NULL );";
     return ss.str();
 }
 
