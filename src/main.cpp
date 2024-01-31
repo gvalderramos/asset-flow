@@ -1,13 +1,17 @@
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 
-#include <filesystem>
-#include "asset-flow-db/storage.hpp"
+int main(int argc, char* argv[]) {
+//    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
+    QGuiApplication app(argc, argv);
 
+    QQmlApplicationEngine engine;
+    const QUrl url (u"qrc:/qml/main.qml"_qs);
+    engine.load(url);
+//    engine.load(QUrl(QStringLiteral("qml:/main.qml")));
+//    if (engine.rootObjects().isEmpty())
+//        return -1;
 
-
-int main() {
-    std::filesystem::path path("./database.db");
-    auto strg = Storage(path);
-    
-    return 0;
+    return app.exec();
 }
