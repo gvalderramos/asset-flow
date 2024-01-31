@@ -23,6 +23,9 @@ public:
             break;
         case QueryMethod::Insert:
             m_sqlQuery << "INSERT INTO " << m_tableName << " ";
+            if(fields != "*") {
+                m_sqlQuery << " (" << fields << ") ";
+            }
             break;
         case QueryMethod::Update:
             m_sqlQuery << "UPDATE " << m_tableName << " ";
@@ -48,11 +51,11 @@ public:
         m_sqlQuery << " = " << value << " ";
         return *this;
     };
-    Query& and(const std::string& result){
+    Query& also(const std::string& result){
         m_sqlQuery << " AND ";
         return *this;
     };
-    Query& or(const std::string& result) {
+    Query& either(const std::string& result) {
         m_sqlQuery << " OR ";
         return *this;
     };
