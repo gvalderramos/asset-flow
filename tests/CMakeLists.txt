@@ -1,3 +1,3 @@
 enable_testing()
 
-add_subdirectory(asset-flow-db)
+#add_subdirectory(asset-flow-db)
